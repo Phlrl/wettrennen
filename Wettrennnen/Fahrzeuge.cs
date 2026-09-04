@@ -7,29 +7,41 @@ namespace Wettrennnen
     abstract class Fahrzeug
     {
         protected double Geschwindigkeit = 0; //kmh
+
         protected double Position = 0; //km
 
+        protected int Raeder;
 
-        protected void bewege (double Minutes)
+        protected double Maximalgeschwindigkeit = 0;
+
+        public void bewege (double Minutes)
         {
             double t = Minutes / 60;
-            Position += Geschwindigkeit * t;
+            double strecke = Geschwindigkeit * t;
+            Position = Position + strecke;          // Position += Geschwindigkeit * t
         }
 
-        protected void SetzeGeschwindigkeit()
+        public void SetzeGeschwindigkeit(double geschwindigkeit)
         {
-
+            if (Maximalgeschwindigkeit > geschwindigkeit)
+            {
+                Geschwindigkeit = geschwindigkeit;
+                Console.WriteLine("Maximalgeschwindigkeit nicht überschritten");  // todo : einfügen von geschwindigkeit und max geschwindigkeit in protokoll 
+            }
         }
-        protected int Raeder;
+
+        public double getMaxGeschwindigkeit()
+        {
+            return Maximalgeschwindigkeit;
+        }
     }
 
     class Fahrrad: Fahrzeug
     {
-        public Fahrrad()
+        public Fahrrad() //constructor
         {
             Raeder = 2;
-
-            Fahrrad fahrrad = new Fahrrad();
+            Maximalgeschwindigkeit = 20;
         }
     }
 
@@ -38,17 +50,35 @@ namespace Wettrennnen
         public Auto()
         {
             Raeder = 4;
-            Auto auto = new Auto();
+            Maximalgeschwindigkeit = 150;
         }
     }
 
     class Rennwagen : Auto
     {
-        
+        public Rennwagen()
+        {
+            Maximalgeschwindigkeit = 220;
+        }
     }
 
     class Krankenwagen : Auto
     {
+        bool Blaulicht = false;
 
+        public Krankenwagen()
+        {
+            Maximalgeschwindigkeit = 80;
+        }
+
+        public void BlaulichtAn()
+        {
+            Blaulicht = true;
+        }
+
+        public void BlaulichtAus()
+        {
+            Blaulicht = false;
+        }
     }
 }
