@@ -16,9 +16,12 @@ namespace Wettrennnen
 
         public void bewege (double Minutes)
         {
-            double t = Minutes / 60;
-            double strecke = Geschwindigkeit * t;
-            Position = Position + strecke;          // Position += Geschwindigkeit * t
+            if (Geschwindigkeit != 0)
+            {
+                double t = Minutes / 60;
+                double strecke = Geschwindigkeit * t;
+                Position = Position + strecke;          // Position += Geschwindigkeit * 
+            }        
         }
 
         public void SetzeGeschwindigkeit(double geschwindigkeit)
@@ -26,7 +29,7 @@ namespace Wettrennnen
             if (Maximalgeschwindigkeit > geschwindigkeit)
             {
                 Geschwindigkeit = geschwindigkeit;
-                Console.WriteLine("Maximalgeschwindigkeit nicht überschritten");  // todo : einfügen von geschwindigkeit und max geschwindigkeit in protokoll 
+                Console.WriteLine("Maximalgeschwindigkeit von " + Maximalgeschwindigkeit + " überschritten, aktuelle Geschwindigkeit liegt bei " +Geschwindigkeit);   
             }
         }
 
