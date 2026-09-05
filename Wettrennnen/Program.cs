@@ -6,7 +6,7 @@ namespace Wettrennnen
     {
         static void Main(string[] args)
         {
-            test();
+            test2();
         }
 
         static void test()
@@ -64,6 +64,8 @@ namespace Wettrennnen
             foreach (var fahrzeug in fahrzeuge)
             {
                 fahrzeug.bewege(60);
+
+                Console.WriteLine(fahrzeug.GetPosition());
 
                 // fahrzeug.blaulichtAn(); geht nicht fahrzeug.blaulichtAn() nicht eine methode von der klasse fahrzeug ist sondern nur der klasse krankenwagen
             }

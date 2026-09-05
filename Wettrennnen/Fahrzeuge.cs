@@ -26,16 +26,21 @@ namespace Wettrennnen
 
         public void SetzeGeschwindigkeit(double geschwindigkeit)
         {
-            if (Maximalgeschwindigkeit > geschwindigkeit)
+            if (Maximalgeschwindigkeit >= geschwindigkeit)
             {
                 Geschwindigkeit = geschwindigkeit;
-                Console.WriteLine("Maximalgeschwindigkeit von " + Maximalgeschwindigkeit + " überschritten, aktuelle Geschwindigkeit liegt bei " +Geschwindigkeit);   
+                Console.WriteLine("Maximalgeschwindigkeit von " + Maximalgeschwindigkeit + " nicht überschritten, aktuelle Geschwindigkeit liegt bei " +Geschwindigkeit);   
             }
         }
 
         public double getMaxGeschwindigkeit()
         {
             return Maximalgeschwindigkeit;
+        }
+
+        public double GetPosition()
+        {
+            return Position;
         }
     }
 
