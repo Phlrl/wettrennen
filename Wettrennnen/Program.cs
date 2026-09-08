@@ -7,6 +7,7 @@ namespace Wettrennnen
         static void Main(string[] args)
         {
             test2();
+            Console.WriteLine("ende");
         }
 
         static void test()
