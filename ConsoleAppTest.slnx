@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="../MyAPI/MyAPI.csproj" />
-  <Project Path="../TestProjekt/ConsoleAppTest/ConsoleAppTest.csproj" />
-  <Project Path="../TestProjektApp/testConsoleApp/testConsoleApp.csproj" />
-</Solution>
