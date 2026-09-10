@@ -7,11 +7,10 @@ namespace Wettrennnen
     abstract class Fahrzeug
     {
         protected double Geschwindigkeit = 0; //kmh
-
         protected double Position = 0; //km
-
+        protected double Verspaetung = 0; //Minuten
         protected int Raeder;
-
+        protected double Minutes = 0;
         protected double Maximalgeschwindigkeit = 0;
 
         public void bewege (double Minutes)
@@ -41,6 +40,11 @@ namespace Wettrennnen
         public double GetPosition()
         {
             return Position;
+        }
+
+        public void setzeVerspaetung(double Verspeateung)
+        {
+            Minutes += Verspaetung;
         }
     }
 
@@ -89,4 +93,25 @@ namespace Wettrennnen
             Blaulicht = false;
         }
     }
+
+    class Flugzeug : Fahrzeug
+    {
+        bool Fahrwerk = false;
+        public Flugzeug()
+        {
+            Raeder = 3;
+            Maximalgeschwindigkeit = 750;
+        }
+
+        public void FahrwerkEingefahren()
+        {
+            Fahrwerk = false;
+        }
+
+        public void FahrwerkAusgefahren()
+        {
+            Fahrwerk = true;
+        }
+    }
+
 }
