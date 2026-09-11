@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wettrennnen
 {
-    abstract class Fahrzeug
+    public abstract class Fahrzeug
     {
         protected double Geschwindigkeit = 0; //kmh
         protected double Position = 0; //km
@@ -48,7 +48,7 @@ namespace Wettrennnen
         }
     }
 
-    class Fahrrad: Fahrzeug
+    public class Fahrrad: Fahrzeug
     {
         public Fahrrad() //constructor
         {
@@ -57,7 +57,7 @@ namespace Wettrennnen
         }
     }
 
-    class Auto: Fahrzeug
+    public class Auto: Fahrzeug
     {
         public Auto()
         {
@@ -66,7 +66,7 @@ namespace Wettrennnen
         }
     }
 
-    class Rennwagen : Auto
+    public class Rennwagen : Auto
     {
         public Rennwagen()
         {
@@ -74,7 +74,7 @@ namespace Wettrennnen
         }
     }
 
-    class Krankenwagen : Auto
+    public class Krankenwagen : Auto
     {
         bool Blaulicht = false;
 
@@ -94,7 +94,7 @@ namespace Wettrennnen
         }
     }
 
-    class Flugzeug : Fahrzeug
+    public class Flugzeug : Fahrzeug
     {
         bool Fahrwerk = false;
         public Flugzeug()
