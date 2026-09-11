@@ -14,4 +14,15 @@ public class FahrzeugTests
 
         Assert.Equal(20, fahrrad.GetPosition(), 3);
     }
+
+    [Fact]
+    public void Auto_BewegtSichNachGeschwindigkeit()
+    {
+        var auto = new Auto();
+        auto.SetzeGeschwindigkeit(150);
+    
+        auto.bewege(60);
+    
+        Assert.Equal(150, auto.GetPosition(), 3);
+    }
 }

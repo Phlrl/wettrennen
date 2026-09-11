@@ -8,7 +8,6 @@ namespace Wettrennnen
     {
         protected double Geschwindigkeit = 0; //kmh
         protected double Position = 0; //km
-        protected double Verspaetung = 0; //Minuten
         protected int Raeder;
         protected double Minutes = 0;
         protected double Maximalgeschwindigkeit = 0;
@@ -40,11 +39,6 @@ namespace Wettrennnen
         public double GetPosition()
         {
             return Position;
-        }
-
-        public void setzeVerspaetung(double Verspeateung)
-        {
-            Minutes += Verspaetung;
         }
     }
 
@@ -96,6 +90,7 @@ namespace Wettrennnen
 
     public class Flugzeug : Fahrzeug
     {
+        protected double Verspaetung = 0;
         bool Fahrwerk = false;
         public Flugzeug()
         {
@@ -111,6 +106,12 @@ namespace Wettrennnen
         public void FahrwerkAusgefahren()
         {
             Fahrwerk = true;
+        }
+
+        public double setzeVerspaetung(double Verspeateung)
+        {
+            Minutes += Verspaetung;
+            return Verspaetung;
         }
     }
 
