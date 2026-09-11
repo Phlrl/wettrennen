@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Wettrennnen.Tests/Wettrennnen.Tests.csproj" />
   <Project Path="Wettrennnen/Wettrennnen.csproj" />
 </Solution>
