@@ -108,9 +108,13 @@ namespace Wettrennnen
             Fahrwerk = true;
         }
 
-        public double setzeVerspaetung(double Verspeateung)
+        public void setzeVerspaetung(double Verspeateung)
         {
             Minutes += Verspaetung;
+        }
+
+        public double getVerspaetung()
+        {
             return Verspaetung;
         }
     }
