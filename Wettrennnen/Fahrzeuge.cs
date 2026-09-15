@@ -90,7 +90,7 @@ namespace Wettrennnen
     public class Flugzeug : Fahrzeug
     {
         protected double Verspaetung = 0;
-        bool Fahrwerk = false;
+        protected bool Fahrwerk = false;
         public Flugzeug()
         {
             Raeder = 3;
