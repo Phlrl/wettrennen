@@ -9,7 +9,6 @@ namespace Wettrennnen
         protected double Geschwindigkeit = 0; //kmh
         protected double Position = 0; //km
         protected int Raeder;
-        protected double Minutes = 0;
         protected double Maximalgeschwindigkeit = 0;
 
         public void bewege (double Minutes)
@@ -108,9 +107,9 @@ namespace Wettrennnen
             Fahrwerk = true;
         }
 
-        public void setzeVerspaetung(double Verspeateung)
+        public void AddVerspaetung(double v)
         {
-            Minutes += Verspaetung;
+            Verspaetung += v;
         }
 
         public double getVerspaetung()
