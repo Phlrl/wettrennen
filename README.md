@@ -1,6 +1,6 @@
-#Wettrennen
+# Wettrennen
 
-##Main learnings
+## Main learnings
 * OO-Modelling of classes
 * Inheritance of classes
 * protected visibility
